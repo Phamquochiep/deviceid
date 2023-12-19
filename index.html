@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeviceID</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <form class="device_form" action="">
-        <input type="placeholder" id="deviceID" name="" value="">
-        <label for="">DeviceID</label><br>
+    <div class="container">
+        <form class="device_form" action="">
+            <input type="text" id="deviceID" name="" value="">
+            <label for="deviceID">Device ID</label><br>
 
-        <input type="placeholder" id="pub" name="" value="">
-        <label for="">Pub</label><br>
+            <input type="text" id="pub" name="" value="">
+            <label for="pub">Pub</label><br>
 
-        <input type="placeholder" id="sub" name="" value="">
-        <label for="">Sub</label><br>
+            <input type="text" id="sub" name="" value="">
+            <label for="sub">Sub</label><br>
 
-        <input type="submit" value="Xuất">
-    </form>
+            <input class="btn" type="submit" value="Xuất"><br>
 
-    <form class="content_form" action="">
-        <label for="">Nội dung</label><br>
-        <input class="content_input-box" type="placeholder" id="noidung" name="" value=""><br> 
-        <input id="content_btn-1" type="submit" value="Gửi 1">
-        <input id="content_btn-2" type="submit" value="Gửi 2">
-        <input id="content_btn-3" type="submit" value="Gửi 3">
-    </form>
+            <label for="">Nội dung</label><br>
+            <textarea name="" id="" cols="100" rows="10"></textarea>
+            <div class="content_btn">
+                <div class="btn content_btn-1">Gửi 1</div>
+                <div class="btn content_btn-2">Gửi 2</div>
+                <div class="btn content_btn-3">Gửi 3</div>
+            </div>
+        </form>
+    </div>
+
 
     <style>
+        .container{
+            width: 800px;
+            border: 1px solid #333;
+            padding: 12px;
+            margin: auto;
+        }
+
         .device_form input{
             margin: 12px 16px 12px 0;
         }
@@ -39,19 +48,35 @@
 
         .content_input-box{
             margin: 12px 0 12px 0;
+            padding: 100px
+        }
+
+        .content_btn{
+            display: flex;  
+            justify-content: center;
+            
+        }
+
+        .btn{
+            border: 1px solid #333;
+            padding: 8px;
+            margin: 8px 8px 4px 8px;
+            border-radius: 8px;
+            cursor: pointer;
         }
     </style>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        $( "#content_btn-1" ).on( "click", function() {
+        $( ".content_btn-1" ).on( "click", function() {
             console.log( "So 1" );
         } );
 
-        $( "#content_btn-2" ).on( "click", function() {
+        $( ".content_btn-2" ).on( "click", function() {
             console.log( "So 2" );
         } );
 
-        $( "#content_btn-3" ).on( "click", function() {
+        $( ".content_btn-3" ).on( "click", function() {
             console.log( "So 3" );
         } );
     </script>  
